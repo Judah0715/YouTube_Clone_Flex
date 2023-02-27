@@ -1,0 +1,12 @@
+.iframe-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments-section {
+    display: flex;
+    gap: flex;
+    justify-content: center;
+    align-items: center;
+}
