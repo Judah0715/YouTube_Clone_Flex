@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import { KEY } from '../../localKey';
 import './YoutubePage.css'
 import SearchResults from '../SearchResultsPage/SearchResults';
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -16,7 +15,7 @@ const YoutubePage = () => {
     useEffect(() => {
         const videoArray = async () => {
             try {
-                const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=The Office&key=${KEY}&part=snippet&type=video&maxResults=3`)
+                const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=The Office&key=$&part=snippet&type=video&maxResults=3`)
                 setVideos(response.data.items)
                 console.log('response',response.data.items)
             } catch (error) {
