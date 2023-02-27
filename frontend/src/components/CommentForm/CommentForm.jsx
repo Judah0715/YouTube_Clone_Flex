@@ -10,7 +10,6 @@ const CommentForm = ({ onAddComment }) => {
     const [text, setText] = useState('')
     const [likes, setLikes] = useState(0)
     const [dislikes,setDislikes] = useState(0)
-    // const [comment, setComment] = useState({})
 
     const commentSubmit = async (event) => {
         event.preventDefault();
@@ -21,14 +20,7 @@ const CommentForm = ({ onAddComment }) => {
             dislikes: dislikes,
         }
         console.log(comment)
-        // try {
-        //     await axios.post(`http://127.0.0.1:8000/api/comments/`, comment, {
-        //         headers: {
-        //             Authorization: "Bearer " + token}
-        //     });
-        // } catch (error) {
-        //     console.log(error.message)
-        // }
+        
         onAddComment(comment)
     }
 
